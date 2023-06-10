@@ -102,7 +102,7 @@ def main(df, df_test, x_col, mi_score, y_col):
 
     df_test['Prediction_account_status'] = bagging_model.predict(df_test.loc[:, mi_score])
 
-    df_test.to_excel('../df_test_predictions.xlsx')
+    df_test.to_csv('data/output/Prediction_account_status.csv', index=False)
 
     print(df_test)
 
